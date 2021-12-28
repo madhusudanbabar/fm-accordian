@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="./app.js"></script>
 
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
@@ -29,10 +30,11 @@
 
   <div class="container">
     <div class="card">
-      <figure class="card__fig">
+      <picture class="card__fig">
+        <source media="(max-width: 60rem )" srcset="./images/illustration-woman-online-mobile.svg">
         <img src="./images/illustration-woman-online-desktop.svg" alt="illustration-woman-online-desktop"
           class="card__img">
-      </figure>
+      </picture>
       <img src="./images/illustration-box-desktop.svg" alt="illustration-box-desktop" class="card__floating">
       <div class="card__faq">
         <h1 class="card__title">FAQ</h1>
@@ -47,7 +49,7 @@
             </p>
           </li>
 
-          <li class="card__item active">
+          <li class="card__item">
             <h2 class="card__question">What is the maximum file upload size? <img src="./images/icon-arrow-down.svg"
                 alt="icon-arrow-down" class="card__icon"></h2>
             <p class="card__answer">No more than 2GB. All files in your account must fit your allotted storage space.

@@ -51,6 +51,14 @@ body {
     border-radius: 2rem;
     position: relative;
     max-width: 95rem;
+    margin: 2rem auto;
+
+    @media screen and (max-width: 60rem) {
+        flex-direction: column;
+        justify-content: center;
+        max-width: none;
+        margin: 10em;
+    }
 
     & > * {
         flex: 0 0 50%;
@@ -61,6 +69,12 @@ body {
         overflow: hidden;
         position: relative;
         min-width: 45rem;
+
+        @media screen and (max-width: 60rem) {
+            min-height: 25rem;
+            background: url("./images/bg-pattern-mobile.svg") 50% 0 no-repeat;
+            overflow: visible;
+        }
     }
 
     &__img {
@@ -69,6 +83,14 @@ body {
         top: 50%;
         left: 0;
         transform: translate(-15%, -50%);
+
+        @media screen and (max-width: 60rem) {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -57.5%);
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &__floating {
@@ -77,6 +99,10 @@ body {
         top: 50%;
         left: 0;
         transform: translate(-50%, -25%);
+
+        @media screen and (max-width: 60rem) {
+            display: none;
+        }
     }
 
     &__faq {
@@ -84,8 +110,15 @@ body {
         flex-direction: column;
         align-self: flex-start;
         overflow: hidden;
-        // max-width: 40rem;
+        max-width: 40rem;
+        min-height: 62rem;
         padding: 7.5rem 10rem 7.5rem 0rem;
+
+        @media screen and (max-width: 60rem) {
+            padding: 5rem 2rem;
+            align-self: center;
+            min-height: auto;
+        }
     }
 
     &__title {
@@ -94,11 +127,14 @@ body {
 
     &__list {
         list-style: none;
+        margin-top: 2rem;
     }
 
     &__item {
         border-bottom: 1px solid var(--color-gray-light);
         padding: 2rem 0;
+        cursor: pointer;
+        user-select: none;
     }
 
     &__question {
@@ -109,14 +145,21 @@ body {
         width: 100%;
         align-items: center;
         justify-content: space-between;
+        transition: all 0.4s ease;
     }
 
     &__answer {
-        display: none;
-        font-size: 1.4rem;
+        height: 0;
+        opacity: 0;
+        font-size: 1.2rem;
         color: var(--color-gray-dark);
         margin-top: 1rem;
-        width: calc(100% - 2.5ch);
+        transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    &__icon {
+        transition: all 0.4s ease;
     }
 
     // active state
@@ -131,5 +174,7 @@ body {
 
     &__item.active > &__answer {
         display: block;
+        opacity: 1;
+        height: unset;
     }
 }
