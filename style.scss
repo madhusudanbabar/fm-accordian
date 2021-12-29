@@ -25,7 +25,6 @@
 html {
     font-size: 62.5%;
     min-height: 100%;
-    height: 100%;
 }
 
 body {
@@ -57,7 +56,7 @@ body {
         flex-direction: column;
         justify-content: center;
         max-width: none;
-        margin: 10em;
+        margin: 20rem 2rem 5rem 2rem;
     }
 
     & > * {
@@ -71,7 +70,7 @@ body {
         min-width: 45rem;
 
         @media screen and (max-width: 60rem) {
-            min-height: 25rem;
+            min-height: 10rem;
             background: url("./images/bg-pattern-mobile.svg") 50% 0 no-repeat;
             overflow: visible;
         }
@@ -88,8 +87,8 @@ body {
             top: 0;
             left: 50%;
             transform: translate(-50%, -57.5%);
-            height: 100%;
-            width: 100%;
+            // height: 100%;
+            width: 75%;
         }
     }
 
